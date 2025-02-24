@@ -3,7 +3,7 @@ import icons from 'url:../../img/icons.svg';
 
 // fractional library
 // import { Fraction } from 'fractional';
-import Fraction from 'fraction.js';
+import { Fraction } from 'fractional';
 
 import View from './View';
 
