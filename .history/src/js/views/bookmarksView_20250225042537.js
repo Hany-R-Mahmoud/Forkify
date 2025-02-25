@@ -5,9 +5,9 @@ import icons from 'url:../../img/icons.svg';
 class BookmarksView extends View {
   _parentElement = document.querySelector('.bookmarks__list');
   _list = document.querySelector('.bookmarks');
-  _overlay = document.querySelector('.overlay-bookmarks');
+  _overlay = document.querySelector('.overlay');
   _btnOpen = document.querySelector('.nav__btn--bookmarks');
-  _btnClose = document.querySelector('.bookmarks .btn--close-modal');
+  _btnClose = document.querySelector('.btn--close-modal');
 
   _errorMessage = `No bookmarks yet. Find a nice recipe and bookmark it :)`;
   _message = ``;
@@ -26,7 +26,7 @@ class BookmarksView extends View {
     this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
   }
   _addHandlerCloseWindow() {
-    this._list.addEventListener('click', this.toggleWindow.bind(this));
+    this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
   }
 

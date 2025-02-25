@@ -118,6 +118,13 @@ const controlAddNewBookmark = function () {
 //
 const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
+
+  setTimeout(function () {
+    if (
+      !document.querySelector('.overlay-bookmarks').classList.contains('hidden')
+    )
+      bookmarksView.toggleWindow();
+  }, MODAL_CLOSE_SEC * 100);
 };
 //
 

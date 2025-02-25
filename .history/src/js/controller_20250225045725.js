@@ -117,6 +117,7 @@ const controlAddNewBookmark = function () {
 
 //
 const controlBookmarks = function () {
+  bookmarksView.toggleWindow();
   bookmarksView.render(model.state.bookmarks);
 };
 //
@@ -147,9 +148,7 @@ const controlAddRecipe = async function (newRecipe) {
     // close message
 
     setTimeout(function () {
-      if (
-        !document.querySelector('.overlay-recipe').classList.contains('hidden')
-      )
+      if (!document.querySelector('.overlay').classList.contains('hidden'))
         addRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
     //reset form

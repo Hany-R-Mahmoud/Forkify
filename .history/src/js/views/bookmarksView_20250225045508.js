@@ -26,12 +26,12 @@ class BookmarksView extends View {
     this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
   }
   _addHandlerCloseWindow() {
-    this._list.addEventListener('click', this.toggleWindow.bind(this));
+    // this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
   }
 
   addHandlerRender(handler) {
-    window.addEventListener('load', handler);
+    window.addEventListener('load', handler, this.toggleWindow);
   }
 
   _generateMarkup() {

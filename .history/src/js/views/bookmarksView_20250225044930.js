@@ -15,7 +15,7 @@ class BookmarksView extends View {
   constructor() {
     super();
     this._addHandlerShowWindow();
-    this._addHandlerCloseWindow();
+    // this._addHandlerCloseWindow();
   }
 
   toggleWindow() {
@@ -26,7 +26,7 @@ class BookmarksView extends View {
     this._btnOpen.addEventListener('click', this.toggleWindow.bind(this));
   }
   _addHandlerCloseWindow() {
-    this._list.addEventListener('click', this.toggleWindow.bind(this));
+    this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
     this._overlay.addEventListener('click', this.toggleWindow.bind(this));
   }
 

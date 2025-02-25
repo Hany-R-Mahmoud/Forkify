@@ -118,6 +118,8 @@ const controlAddNewBookmark = function () {
 //
 const controlBookmarks = function () {
   bookmarksView.render(model.state.bookmarks);
+  if (!document.querySelector('.overlay-bookmark').classList.contains('hidden'))
+    addRecipeView.toggleWindow();
 };
 //
 
