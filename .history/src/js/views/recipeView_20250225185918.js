@@ -1,9 +1,9 @@
 import icons from 'url:../../img/icons.svg';
-// console.log(icons); // path to the icons in dist folder
+console.log(icons); // path to the icons in dist folder
 
 // fractional library
 // import { Fraction } from 'fractional';
-import Fraction from 'fraction.js';
+// import Fraction from 'fraction.js';
 
 import View from './View';
 
@@ -51,7 +51,7 @@ class RecipeView extends View {
         <div class="recipe__details">
           <div class="recipe__info">
             <svg class="recipe__info-icon">
-              <use href="${icons}#icon-clock"></use>
+              <use href="../../img/icons.svg#icon-clock"></use>
             </svg>
             <span class="recipe__info-data recipe__info-data--minutes">${
               this._data.cookingTime
@@ -137,7 +137,8 @@ class RecipeView extends View {
                 <use href="${icons}#icon-check"></use>
               </svg>
               <div class="recipe__quantity">${
-                ing.quantity ? new Fraction(ing.quantity).toString() : ''
+                ing.quantity
+                // ? new Fraction(ing.quantity).toString() : ''
               }</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
